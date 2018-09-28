@@ -1,0 +1,50 @@
+mkdir Assignment1
+cd Assignment1
+mkdir -p a b/e/f
+cd a
+ls -l ~/ | cat > file.txt
+ mv file.txt file1.txt
+cp file1.txt ../b/e/f/file2.txt
+cat file1.txt | tr -s " " | cut -d " " -f 5|sort|uniq
+cd ../b/e/f
+ pwd
+ cd -
+touch -t 1709281300 file1.txt
+ cd ..
+cat >file3.txt
+head file3.txt
+sed -n -e '7,15p' file3.txt
+ wc -w file3.txt
+echo "hello world"
+ whereis -b ls
+history|tail -n 5
+touch lab1.txt lab2.txt lab3.txt lab4.txt lab5.txt
+rename txt c lab1.txt lab2.txt lab3.txt lab4.txt lab5.txt
+tree
+ls -lt
+ls -rS 
+find -maxdepth 2
+find -type f -name "*.txt"
+clear
+who
+ping -c 1 intranet.iiit.ac.in
+ssh pratyush.kumar@mirage.iiit.ac.in
+who
+touch server.txt
+exit
+ps -a | tr -s " " | cut -d " " -f 2 > pid.txt
+df -h
+ cat /usr/share/dict/words | grep -c "work"
+scp -r Assignment1 pratyush.kumar@mirage.iiit.ac.in:~
+ tar -czvf  Assignment1_20171168.tar.gz Assignment1
+BONUS QUESTIONS
+uname -o
+cal 2017
+date +%F
+wall hello world
+seq 0 8 100000| grep -v [6] | grep [45] |wc -l 
+ifconfig | grep -e inet -e inet6 -e broadcast -e netmask
+find -type f -mtime -1 | xargs tar -czvf backup.tar.gz
+find -type f -mtime -7 | xargs sed -i -e 's/this week/next week/g'
+
+
